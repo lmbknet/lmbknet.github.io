@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lmbk.met/p/hexo-image/</loc>
+    
+    <lastmod>2020-12-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lmbk.met/p/hello-world/</loc>
     
     <lastmod>2020-12-20</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://lmbk.met/p/hexo-init/</loc>
-    
-    <lastmod>2020-12-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lmbk.met/p/hexo-image/</loc>
     
     <lastmod>2020-12-20</lastmod>
     
