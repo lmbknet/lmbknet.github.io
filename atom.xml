@@ -6,7 +6,7 @@
   <link href="https://lmbk.met/atom.xml" rel="self"/>
   
   <link href="https://lmbk.met/"/>
-  <updated>2020-12-19T07:25:34.618Z</updated>
+  <updated>2020-12-20T06:15:58.000Z</updated>
   <id>https://lmbk.met/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>群晖安装transmission以及相关注意事项</title>
+    <link href="https://lmbk.met/p/synology-install-transmission/"/>
+    <id>https://lmbk.met/p/synology-install-transmission/</id>
+    <published>2020-12-20T05:00:00.000Z</published>
+    <updated>2020-12-20T06:15:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Transmission-与-Download-Station-是什么关系？"><a href="#Transmission-与-Download-Station-是什么关系？" class="headerlink" title="Transmission 与 Download Station 是什么关系？"></a>Transmission 与 Download Station 是什么关系？</h3><ul><li><p>Transmission 在群晖系统中默认是没有安装的，也不属于群晖官方出品的软件，它由第三方社群维护；</p></li><li><p>Download Station 是群晖自带的下载软件，它可以下载除了BT以外的其他内容，如：http, ftp 等；只是它的BT功能是由封装到内部的 Transmission 来实现；</p></li><li><p>所以他们不是一个东西！</p></li><li><p>所以他们不是一个东西！</p></li><li><p>所以他们不是一个东西！</p></li></ul><h3 id="安装Transmission"><a href="#安装Transmission" class="headerlink" title="安装Transmission"></a>安装Transmission</h3><ol><li>打开群晖套件中心–&gt;设置–&gt;常规选项，信任层级下的允许安装以下发行者发布的套件：选择任何发行者。</li><li>套件来源–&gt;新增–&gt;名称随意–&gt;位置上填入<a href="https://packages.synocommunity.com/">https://packages.synocommunity.com</a></li><li>这时我们就可以在社群上找到Transmission这个套件了，下载安装即可。</li><li>安装时要设置一下路径和设置一个登陆Transmission Web的账号密码，完成后启动套件就可以在浏览器上输入http://群晖的IP:9091进行访问Transmission Web界面。</li></ol><h3 id="汉化Transmission-Web界面"><a href="#汉化Transmission-Web界面" class="headerlink" title="汉化Transmission Web界面"></a>汉化Transmission Web界面</h3><p>因为Transmission Web界面默认是英文，而且个人认为奇丑无比，严重影响使用，故我们接下来要对其进行汉化一下。</p><h4 id="如何安装（SSH方式）"><a href="#如何安装（SSH方式）" class="headerlink" title="如何安装（SSH方式）"></a>如何安装（SSH方式）</h4><ul><li>安装之前<ul><li>请确认系统已安装 Transmission；</li><li>请确认你是否有 root 用户权限；</li></ul></li></ul><h4 id="获取最新的安装脚本"><a href="#获取最新的安装脚本" class="headerlink" title="获取最新的安装脚本"></a>获取最新的安装脚本</h4><ul><li>使用终端以 <code>admin</code> 用户登录到你的NAS，获取root权限， <code>sudo -i</code>；</li><li>获取最新的安装脚本：</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh</span><br></pre></td></tr></table></figure><ul><li>国内用户可使用 <code>gitee</code> 镜像地址（下同）：</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>tee.com<span class="regexp">/culturist/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-gitee.sh</span><br></pre></td></tr></table></figure><ul><li>请留意执行结果，如果出现 <code>install-tr-control-cn.sh.1</code> 之类的提示，表示文件已存在，请使用 <code>rm install-tr-control-cn.sh*</code> 删除之前的脚本再重新执行上面的命令；</li><li>如果提示 <code>https</code> 获取失败，请使用以下命令获取安装脚本：</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh --no-check-certificate</span><br></pre></td></tr></table></figure><ul><li>如果提示文件已存在，可以通过 <code>rm install-tr-control-cn.sh</code> 进行删除后再执行下载；或者在 <code>wget</code> 后面添加 <code>-N</code> 参数，如：</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh --no-check-certificate</span><br></pre></td></tr></table></figure><h4 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h4><ul><li>执行安装脚本（如果系统不支持 <code>bash</code> 命令，请尝试将 <code>bash</code> 改为 <code>sh</code> ）：</li></ul><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure><ul><li>如果出现 <code>Permission denied</code> 之类的提示，表示没有权限，可尝试添加执行权限：</li></ul><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +<span class="keyword">x</span> install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure><ul><li><p>如果命令成功执行，将出现以下界面：</p><p><img src="https://github.com/ronggang/transmission-web-control/wiki/images/install-tr-control-cn.png" alt="install-tr-control-cn"></p></li><li><p>按照提示，输入相应的数字，按回车即可；</p></li><li><p>如果无法正常显示中文，请尝试设置SSH客户端编码为 <code>UTF-8</code> ，如依然不能显示中文，请下载并使用英文安装脚本 <code>install-tr-control.sh</code></p></li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control.sh --no-check-certificate</span><br></pre></td></tr></table></figure><ul><li>安装完成后，用浏览器访问 Transmission Web Interface（如：<a href="http://192.168.1.1:9091/">http://192.168.1.1:9091/</a> ）即可看到新的界面；如果无法看到新界面，可能是浏览器缓存了，请按 <code>Ctrl + F5</code> 强制刷新页面或 <a href="https://jingyan.baidu.com/article/8065f87fc59f1723312498f1.html">清空缓存</a> 后再重新打开；</li><li>如果在知道自己的 Transmission Web 所在目录，也可以在安装脚本后面直接加路径，以避免搜索，如：</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash install-tr-control-cn.sh <span class="regexp">/usr/</span>local<span class="regexp">/transmission/</span>share/transmission</span><br></pre></td></tr></table></figure><ul><li>注意，路径最后 <strong><code>不要</code></strong> 加 <code>web</code> ；</li></ul><h4 id="如何更新"><a href="#如何更新" class="headerlink" title="如何更新"></a>如何更新</h4><ul><li><p>以下几种情况，需要更新 Transmission Web Control：</p><ul><li>Transmission 重新安装或升级之后；</li><li>Transmission Web Control 版本更新时；</li></ul></li><li><p>如何更新：</p><ul><li>如果之前已经下载过安装脚本，只需要在安装脚本所在目录执行一次脚本即可：</li></ul><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo bash install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure><ul><li>如果没有下载过安装脚本，或脚本有更新时，请参考安装方式重新下载安装脚本执行安装即可。</li></ul></li></ul><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>安装和更新中文界面时可能会报错<code>Couldn&#39;t find Transmission&#39;s web interface files!</code>，这时我们可以下载最新的源码包：<a href="https://github.com/ronggang/transmission-web-control/archive/master.zip">下载</a>，然后用Winscp登陆NAS，协议选择scp，账号要用admin，找到/usr/local/transmission/share/transmission/web这个目录，然后将刚下载的汉化包里面的src目录下所有文件上传到web这个目录里即可，如上传时报错，可先将/usr/local/transmission/share/transmission/web目录下的index.html改名为index.html.bak。</p><p>最后，要注意权限问题，这里我们获取root权限后可以将web目录的权限修改一下，如：<code>chmod 777 /usr/local/transmission/share/transmission/web</code>。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Transmission-与-Download-Station-是什么关系？&quot;&gt;&lt;a href=&quot;#Transmission-与-Download-Station-是什么关系？&quot; class=&quot;headerlink&quot; title=&quot;Transmission 与 D</summary>
+      
+    
+    
+    
+    <category term="折腾之路" scheme="https://lmbk.met/categories/%E6%8A%98%E8%85%BE%E4%B9%8B%E8%B7%AF/"/>
+    
+    
+    <category term="群晖" scheme="https://lmbk.met/tags/%E7%BE%A4%E6%99%96/"/>
+    
+    <category term="NAS" scheme="https://lmbk.met/tags/NAS/"/>
+    
+    <category term="transmission" scheme="https://lmbk.met/tags/transmission/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 建站之路</title>
