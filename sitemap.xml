@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lmbk.met/p/hello-world/</loc>
+    
+    <lastmod>2020-12-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lmbk.met/p/hexo-init/</loc>
+    
+    <lastmod>2020-12-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lmbk.met/p/hexo-image/</loc>
     
     <lastmod>2020-12-20</lastmod>
@@ -12,20 +26,6 @@
     <loc>https://lmbk.met/p/synology-install-transmission/</loc>
     
     <lastmod>2020-12-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lmbk.met/p/hello-world/</loc>
-    
-    <lastmod>2020-12-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lmbk.met/p/hexo-init/</loc>
-    
-    <lastmod>2020-12-19</lastmod>
     
   </url>
   
@@ -58,13 +58,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://lmbk.met/tags/Hexo/</loc>
-    <lastmod>2020-12-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <url>
     <loc>https://lmbk.met/tags/hexo/</loc>
@@ -102,13 +95,6 @@
   </url>
   
 
-  
-  <url>
-    <loc>https://lmbk.met/categories/Hexo/</loc>
-    <lastmod>2020-12-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <url>
     <loc>https://lmbk.met/categories/hexo/</loc>

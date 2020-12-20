@@ -18,10 +18,10 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -68,10 +68,10 @@
 <h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p><a href="https://hexo.io/zh-cn/docs/themes">主题</a> 文件夹。Hexo 会根据主题来生成静态页面。</p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
