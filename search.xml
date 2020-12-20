@@ -41,10 +41,11 @@
 <p><strong>这里一定要注意的是，Typora偏好设置时，复制到指定路径这里一定要选择相对路径。是<code>./$&#123;filename&#125;</code>而不是<code>../$&#123;filename&#125;</code>。/前面是一个点哦！</strong></p>
 ]]></content>
       <categories>
-        <category>-hexo</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>-hexo -typora</tag>
+        <tag>hexo</tag>
+        <tag>typora</tag>
       </tags>
   </entry>
   <entry>

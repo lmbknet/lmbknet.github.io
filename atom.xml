@@ -6,7 +6,7 @@
   <link href="https://lmbk.met/atom.xml" rel="self"/>
   
   <link href="https://lmbk.met/"/>
-  <updated>2020-12-20T10:46:27.706Z</updated>
+  <updated>2020-12-20T11:26:39.245Z</updated>
   <id>https://lmbk.met/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lmbk.met/p/hexo-image/"/>
     <id>https://lmbk.met/p/hexo-image/</id>
     <published>2020-12-20T07:52:47.000Z</published>
-    <updated>2020-12-20T10:46:27.706Z</updated>
+    <updated>2020-12-20T11:26:39.245Z</updated>
     
     <content type="html"><![CDATA[<p>关于hexo在Typora上插入图片的相关操作，先在Typora偏好设置上进行如下图的设置。</p><img src="/p/hexo-image/39469-20200316225054107-484234981-1608458966879.png" class=""><p>然后按照下面的步骤操作：</p><ol><li>修改<code>post_asset_folder: true</code></li><li>生成一篇新的文章<code>hexo new hexo-image.md</code> <a id="more"></a></li><li>通过Typora打开hexo-image.md并插入一张图片，这时我们可以发现，在<code>source/_posts</code>目录下，图片已经自动拷贝到hexo-image这个目录里了。</li><li>回到hexo-site根目录安装相关的插件<code>npm install hexo-image-link --save</code></li><li>这时我们就可以使用<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>看看效果了。</li></ol><p><strong>这里一定要注意的是，Typora偏好设置时，复制到指定路径这里一定要选择相对路径。是<code>./$&#123;filename&#125;</code>而不是<code>../$&#123;filename&#125;</code>。/前面是一个点哦！</strong></p>]]></content>
     
@@ -36,10 +36,12 @@
     
     
     
-    <category term="-hexo" scheme="https://lmbk.met/categories/hexo/"/>
+    <category term="hexo" scheme="https://lmbk.met/categories/hexo/"/>
     
     
-    <category term="-hexo -typora" scheme="https://lmbk.met/tags/hexo-typora/"/>
+    <category term="hexo" scheme="https://lmbk.met/tags/hexo/"/>
+    
+    <category term="typora" scheme="https://lmbk.met/tags/typora/"/>
     
   </entry>
   

@@ -67,7 +67,14 @@
   </url>
   
   <url>
-    <loc>https://lmbk.met/tags/hexo-typora/</loc>
+    <loc>https://lmbk.met/tags/hexo/</loc>
+    <lastmod>2020-12-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lmbk.met/tags/typora/</loc>
     <lastmod>2020-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
