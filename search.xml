@@ -25,6 +25,30 @@
       </tags>
   </entry>
   <entry>
+    <title>简述Hexo在Typora插入图片</title>
+    <url>/p/hexo-image/</url>
+    <content><![CDATA[<p>关于hexo在Typora上插入图片的相关操作，先在Typora偏好设置上进行如下图的设置。</p>
+<img data-src="/p/hexo-image/39469-20200316225054107-484234981-1608458966879.png" class="">
+
+<p>然后按照下面的步骤操作：</p>
+<ol>
+<li>修改<code>post_asset_folder: true</code></li>
+<li>生成一篇新的文章<code>hexo new hexo-image.md</code> <a id="more"></a></li>
+<li>通过Typora打开hexo-image.md并插入一张图片，这时我们可以发现，在<code>source/_posts</code>目录下，图片已经自动拷贝到hexo-image这个目录里了。</li>
+<li>回到hexo-site根目录安装相关的插件<code>npm install hexo-image-link --save</code></li>
+<li>这时我们就可以使用<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>看看效果了。</li>
+</ol>
+<p><strong>这里一定要注意的是，Typora偏好设置时，复制到指定路径这里一定要选择相对路径。是<code>./$&#123;filename&#125;</code>而不是<code>../$&#123;filename&#125;</code>。/前面是一个点哦！</strong></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>typora</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 建站之路</title>
     <url>/p/hexo-init/</url>
     <content><![CDATA[<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
@@ -162,34 +186,11 @@
       </tags>
   </entry>
   <entry>
-    <title>简述Hexo在Typora插入图片</title>
-    <url>/p/hexo-image/</url>
-    <content><![CDATA[<p>关于hexo在Typora上插入图片的相关操作，先在Typora偏好设置上进行如下图的设置。</p>
-<img data-src="/p/hexo-image/39469-20200316225054107-484234981-1608458966879.png" class="">
-
-<p>然后按照下面的步骤操作：</p>
-<ol>
-<li>修改<code>post_asset_folder: true</code></li>
-<li>生成一篇新的文章<code>hexo new hexo-image.md</code> <a id="more"></a></li>
-<li>通过Typora打开hexo-image.md并插入一张图片，这时我们可以发现，在<code>source/_posts</code>目录下，图片已经自动拷贝到hexo-image这个目录里了。</li>
-<li>回到hexo-site根目录安装相关的插件<code>npm install hexo-image-link --save</code></li>
-<li>这时我们就可以使用<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>看看效果了。</li>
-</ol>
-<p><strong>这里一定要注意的是，Typora偏好设置时，复制到指定路径这里一定要选择相对路径。是<code>./$&#123;filename&#125;</code>而不是<code>../$&#123;filename&#125;</code>。/前面是一个点哦！</strong></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>typora</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>脚本从Windows复制到Linux上使用时报错的解决方法</title>
     <url>/p/windows-sh-linux-bin-bash-error/</url>
     <content><![CDATA[<p>不知道大家有没有遇到这样的情况，在Windows上编写了一些脚本命令，使用起来正常，可当我们把这个脚本复制到Linux上使用时却出现下面的问题。</p>
-<p>![](windows-sh-linux-bin-bash-error/2020-12-21 17-53-40.png)</p>
+<img data-src="/p/windows-sh-linux-bin-bash-error/2020-12-21-17-53-40.png" class="">
+
 <a id="more"></a>
 
 <p>具体的原因是文件格式的问题，我们可以进行相应的修改。方法有下面两种：</p>

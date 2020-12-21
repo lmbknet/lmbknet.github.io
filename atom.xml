@@ -6,7 +6,7 @@
   <link href="https://lmbk.met/atom.xml" rel="self"/>
   
   <link href="https://lmbk.met/"/>
-  <updated>2020-12-21T10:06:44.881Z</updated>
+  <updated>2020-12-21T10:12:15.986Z</updated>
   <id>https://lmbk.met/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://lmbk.met/p/windows-sh-linux-bin-bash-error/"/>
     <id>https://lmbk.met/p/windows-sh-linux-bin-bash-error/</id>
     <published>2020-12-21T09:39:46.000Z</published>
-    <updated>2020-12-21T10:06:44.881Z</updated>
+    <updated>2020-12-21T10:12:15.986Z</updated>
     
-    <content type="html"><![CDATA[<p>不知道大家有没有遇到这样的情况，在Windows上编写了一些脚本命令，使用起来正常，可当我们把这个脚本复制到Linux上使用时却出现下面的问题。</p><p>![](windows-sh-linux-bin-bash-error/2020-12-21 17-53-40.png)</p><a id="more"></a><p>具体的原因是文件格式的问题，我们可以进行相应的修改。方法有下面两种：</p><ol><li>利用vim打开脚本文件，执行<code>:set fileformat=unix</code>后<code>:wq</code>保存</li><li>直接执行<code>sed -i &quot;s/\r//&quot; deploy.sh</code>进行转化</li></ol><p>这样我们再<code>./deploy.sh</code>执行脚本就能正常运行起来了。</p>]]></content>
+    <content type="html"><![CDATA[<p>不知道大家有没有遇到这样的情况，在Windows上编写了一些脚本命令，使用起来正常，可当我们把这个脚本复制到Linux上使用时却出现下面的问题。</p><img data-src="/p/windows-sh-linux-bin-bash-error/2020-12-21-17-53-40.png" class=""><a id="more"></a><p>具体的原因是文件格式的问题，我们可以进行相应的修改。方法有下面两种：</p><ol><li>利用vim打开脚本文件，执行<code>:set fileformat=unix</code>后<code>:wq</code>保存</li><li>直接执行<code>sed -i &quot;s/\r//&quot; deploy.sh</code>进行转化</li></ol><p>这样我们再<code>./deploy.sh</code>执行脚本就能正常运行起来了。</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;不知道大家有没有遇到这样的情况，在Windows上编写了一些脚本命令，使用起来正常，可当我们把这个脚本复制到Linux上使用时却出现下面的问题。&lt;/p&gt;
-&lt;p&gt;![](windows-sh-linux-bin-bash-error/2020-12-21 17-53-40.png)&lt;/p&gt;</summary>
+&lt;img data-src=&quot;/p/windows-sh-linux-bin-bash-error/2020-12-21-17-53-40.png&quot; class=&quot;&quot;&gt;</summary>
     
     
     
