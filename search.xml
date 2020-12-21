@@ -3,21 +3,18 @@
   <entry>
     <title>Hello World</title>
     <url>/p/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a><a id="more"></a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
+        <category>折腾之路</category>
         <category>hexo</category>
       </categories>
       <tags>
@@ -27,7 +24,7 @@
   <entry>
     <title>简述Hexo在Typora插入图片</title>
     <url>/p/hexo-image/</url>
-    <content><![CDATA[<p>关于hexo在Typora上插入图片的相关操作，先在Typora偏好设置上进行如下图的设置。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>关于hexo在Typora上插入图片的相关操作，先在Typora偏好设置上进行如下图的设置。</p>
 <img data-src="/p/hexo-image/39469-20200316225054107-484234981-1608458966879.png" class="">
 
 <p>然后按照下面的步骤操作：</p>
@@ -41,6 +38,7 @@
 <p><strong>这里一定要注意的是，Typora偏好设置时，复制到指定路径这里一定要选择相对路径。是<code>./$&#123;filename&#125;</code>而不是<code>../$&#123;filename&#125;</code>。/前面是一个点哦！</strong></p>
 ]]></content>
       <categories>
+        <category>折腾之路</category>
         <category>hexo</category>
       </categories>
       <tags>
@@ -51,9 +49,8 @@
   <entry>
     <title>Hexo 建站之路</title>
     <url>/p/hexo-init/</url>
-    <content><![CDATA[<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> hexo init &lt;folder&gt;</span><br><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line"><span class="variable">$</span> npm install</span><br></pre></td></tr></table></figure>
-
 <p>新建完成后，指定文件夹的目录如下：</p>
 <figure class="highlight sqf"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="variable">_config</span>.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── <span class="variable">_drafts</span></span><br><span class="line">|   └── <span class="variable">_posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -61,13 +58,13 @@
 <h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，您可以在此配置大部分的参数。</p>
 <h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序的信息。<a href="https://ejs.co/">EJS</a>, <a href="http://learnboost.github.io/stylus/">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
 <figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span>.json&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;private&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hexo&quot;</span>: <span class="string">&quot;^3.8.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;^0.1.5&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;^0.1.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-index&quot;</span>: <span class="string">&quot;^0.2.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;^0.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;^0.3.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;^0.3.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;^0.3.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-server&quot;</span>: <span class="string">&quot;^0.3.3&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p><a href="https://hexo.io/zh-cn/docs/writing">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
 <p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
 <h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
 <h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p><a href="https://hexo.io/zh-cn/docs/themes">主题</a> 文件夹。Hexo 会根据主题来生成静态页面。</p>
 ]]></content>
       <categories>
+        <category>折腾之路</category>
         <category>hexo</category>
       </categories>
       <tags>
@@ -77,7 +74,7 @@
   <entry>
     <title>群晖安装transmission以及相关注意事项</title>
     <url>/p/synology-install-transmission/</url>
-    <content><![CDATA[<h3 id="Transmission-与-Download-Station-是什么关系？"><a href="#Transmission-与-Download-Station-是什么关系？" class="headerlink" title="Transmission 与 Download Station 是什么关系？"></a>Transmission 与 Download Station 是什么关系？</h3><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Transmission-与-Download-Station-是什么关系？"><a href="#Transmission-与-Download-Station-是什么关系？" class="headerlink" title="Transmission 与 Download Station 是什么关系？"></a>Transmission 与 Download Station 是什么关系？</h3><ul>
 <li><p>Transmission 在群晖系统中默认是没有安装的，也不属于群晖官方出品的软件，它由第三方社群维护；</p>
 </li>
 <li><p>Download Station 是群晖自带的下载软件，它可以下载除了BT以外的其他内容，如：http, ftp 等；只是它的BT功能是由封装到内部的 Transmission 来实现；</p>
@@ -108,33 +105,27 @@
 <li>获取最新的安装脚本：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>国内用户可使用 <code>gitee</code> 镜像地址（下同）：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>tee.com<span class="regexp">/culturist/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-gitee.sh</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>请留意执行结果，如果出现 <code>install-tr-control-cn.sh.1</code> 之类的提示，表示文件已存在，请使用 <code>rm install-tr-control-cn.sh*</code> 删除之前的脚本再重新执行上面的命令；</li>
 <li>如果提示 <code>https</code> 获取失败，请使用以下命令获取安装脚本：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh --no-check-certificate</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>如果提示文件已存在，可以通过 <code>rm install-tr-control-cn.sh</code> 进行删除后再执行下载；或者在 <code>wget</code> 后面添加 <code>-N</code> 参数，如：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget -N https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh --no-check-certificate</span><br></pre></td></tr></table></figure>
-
 <h4 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h4><ul>
 <li>执行安装脚本（如果系统不支持 <code>bash</code> 命令，请尝试将 <code>bash</code> 改为 <code>sh</code> ）：</li>
 </ul>
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">bash install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>如果出现 <code>Permission denied</code> 之类的提示，表示没有权限，可尝试添加执行权限：</li>
 </ul>
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">chmod +<span class="keyword">x</span> install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>如果命令成功执行，将出现以下界面：</p>
 <p><img data-src="https://github.com/ronggang/transmission-web-control/wiki/images/install-tr-control-cn.png" alt="install-tr-control-cn"></p>
@@ -145,13 +136,11 @@
 </li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control.sh --no-check-certificate</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>安装完成后，用浏览器访问 Transmission Web Interface（如：<a href="http://192.168.1.1:9091/">http://192.168.1.1:9091/</a> ）即可看到新的界面；如果无法看到新界面，可能是浏览器缓存了，请按 <code>Ctrl + F5</code> 强制刷新页面或 <a href="https://jingyan.baidu.com/article/8065f87fc59f1723312498f1.html">清空缓存</a> 后再重新打开；</li>
 <li>如果在知道自己的 Transmission Web 所在目录，也可以在安装脚本后面直接加路径，以避免搜索，如：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">bash install-tr-control-cn.sh <span class="regexp">/usr/</span>local<span class="regexp">/transmission/</span>share/transmission</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>注意，路径最后 <strong><code>不要</code></strong> 加 <code>web</code> ；</li>
 </ul>
@@ -167,7 +156,6 @@
 <li>如果之前已经下载过安装脚本，只需要在安装脚本所在目录执行一次脚本即可：</li>
 </ul>
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">sudo bash install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span>	</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>如果没有下载过安装脚本，或脚本有更新时，请参考安装方式重新下载安装脚本执行安装即可。</li>
 </ul>
@@ -188,7 +176,7 @@
   <entry>
     <title>脚本从Windows复制到Linux上使用时报错的解决方法</title>
     <url>/p/windows-sh-linux-bin-bash-error/</url>
-    <content><![CDATA[<p>不知道大家有没有遇到这样的情况，在Windows上编写了一些脚本命令，使用起来正常，可当我们把这个脚本复制到Linux上使用时却出现下面的问题。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>不知道大家有没有遇到这样的情况，在Windows上编写了一些脚本命令，使用起来正常，可当我们把这个脚本复制到Linux上使用时却出现下面的问题。</p>
 <img data-src="/p/windows-sh-linux-bin-bash-error/2020-12-21-17-53-40.png" class="">
 
 <a id="more"></a>
