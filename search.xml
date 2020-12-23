@@ -214,18 +214,18 @@
 <h3 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h3><p>我拿手机简单的演示一下导入过程，至于下载与安装<code>Open VPN</code>的过程就略过了。</p>
 <img data-src="/p/synology-nas-vps-server/Screenshot_20201223-232659.jpg" class="">
 
-<p>打开软件，点击左上角的**<code>Profiles</code>**菜单。</p>
+<p>打开软件，点击左上角的<code>Profiles</code>菜单。</p>
 <img data-src="/p/synology-nas-vps-server/Screenshot_20201223-232748.jpg" class="">
 
-<p>选择第一项**<code>Import Profile</code>**</p>
+<p>选择第一项<code>Import Profile</code></p>
 <img data-src="/p/synology-nas-vps-server/Screenshot_20201223-232839.jpg" class="">
 
-<p>选择**<code>FILE</code><strong>，找到事先导出并复制到手机上的<code>VPNConfig.ovpn</code>文件，点击</strong><code>IMPORT</code>**</p>
+<p>选择<code>FILE</code>，找到事先导出并复制到手机上的<code>VPNConfig.ovpn</code>文件，点击<code>IMPORT</code></p>
 <img data-src="/p/synology-nas-vps-server/Screenshot_20201223-234133.jpg" class="">
 
 <img data-src="/p/synology-nas-vps-server/Screenshot_20201223-234306.jpg" class="" title="Screenshot_20201223-234306">
 
-<p>点击右边的笔图标进行编辑，输入群晖系统的用户和密码，这里注意上文提到的权限问题，VPN Server默认是给群晖所有用户都开放了访问权限的。输入完后点击右上边的**<code>SAVE</code>**。</p>
+<p>点击右边的笔图标进行编辑，输入群晖系统的用户和密码，这里注意上文提到的权限问题，VPN Server默认是给群晖所有用户都开放了访问权限的。输入完后点击右上边的<code>SAVE</code>。</p>
 <p>点击左边的开关按钮，这样我们就使用VPN顺利的连接回家里内网了。</p>
 <p>至于其他客户端配置的方法这里就不一一列举，毕竟一理通百理，如实在还是不懂的请自行搜索相关资料。</p>
 <h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>通过VPN连接回家里的内网后，平时我们在家里的操作都能远程起来，而且比其他方法都要简单，单单不用开放家里所有设备的端口这一条，就值得我们使用此方法。毕竟端口开放多了，被扫的机率就更高，危险系数也随之变高。</p>
