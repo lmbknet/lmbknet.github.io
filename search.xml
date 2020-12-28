@@ -78,6 +78,8 @@
 <p>我其实是挺喜欢Valine的，主要是因为喜欢它的简洁。但在NEXT最新版本的主题上，已经把这个主题移除。相关的说明如下：</p>
 <img data-src="/p/hexo-next-valine-install/1.png" class="">
 
+<a id="more"></a>
+
 <p>官方说明链接：<a href="https://github.com/next-theme/hexo-theme-next/issues/4">https://github.com/next-theme/hexo-theme-next/issues/4</a></p>
 <p>对于我来说，隐私什么的都是浮云，哪个方便就怎样来吧。所以我决定还是采用Valine这个评论，毕竟国内好用的第三方评论系统就那么几个，而且我只对Valine有点了解。</p>
 <h3 id="安装Valine"><a href="#安装Valine" class="headerlink" title="安装Valine"></a>安装Valine</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install next-theme&#x2F;hexo-next-valine</span><br></pre></td></tr></table></figure>
