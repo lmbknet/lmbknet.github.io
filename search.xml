@@ -72,6 +72,43 @@
       </tags>
   </entry>
   <entry>
+    <title>NEXT主题8.1版本安装Valine</title>
+    <url>/p/hexo-next-valine-install/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>博客已经建立十多天了，一开始我是不准备开启评论的，但在几个博客圈的几个朋友的一番说辞下，还是决定把评论开启起来。</p>
+<p>我其实是挺喜欢Valine的，主要是因为喜欢它的简洁。但在NEXT最新版本的主题上，已经把这个主题移除。相关的说明如下：</p>
+<img data-src="/p/hexo-next-valine-install/1.png" class="">
+
+<p>官方说明链接：<a href="https://github.com/next-theme/hexo-theme-next/issues/4">https://github.com/next-theme/hexo-theme-next/issues/4</a></p>
+<p>对于我来说，隐私什么的都是浮云，哪个方便就怎样来吧。所以我决定还是采用Valine这个评论，毕竟国内好用的第三方评论系统就那么几个，而且我只对Valine有点了解。</p>
+<h3 id="安装Valine"><a href="#安装Valine" class="headerlink" title="安装Valine"></a>安装Valine</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install next-theme&#x2F;hexo-next-valine</span><br></pre></td></tr></table></figure>
+<p>把插件装好后，我们只需到主题设置里添加</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"><span class="comment"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span></span><br><span class="line">valine:</span><br><span class="line">  enable: false</span><br><span class="line">  appId:  # your leancloud application appid</span><br><span class="line">  appKey:  # your leancloud application appkey</span><br><span class="line">  serverURLs: # When the custom domain name is enabled, fill it in here</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: mm # gravatar style</span><br><span class="line">  meta: [nick, mail, link] # Custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br><span class="line">  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors&#x27; for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span><br><span class="line">  comment_count: true # If false, comment count will only be displayed in post page, not in home page</span><br><span class="line">  recordIP: false # Whether to record the commenter IP</span><br></pre></td></tr></table></figure>
+<p>理论只须更改<code>appId</code>和<code>appKey</code>这两项，要注意空格问题。</p>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>顺利安装完成后，却发现出现401这个错误，再次确认不是设置的问题。在网上寻找得知，是因为插件里引用的CDN出了问题，没办法，只好自己着手修改一下。</p>
+<p>在hexo站点目录找到valine.njk这个文件，路径如下。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">node_modules/hexo-next-valine/valine.njk</span><br></pre></td></tr></table></figure>
+<p>添加一行</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>将jsderlivr这个CDN换成unpkg的</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">https://unpkg.com/valine@1.4.14/dist/Valine.min.js</span><br></pre></td></tr></table></figure>
+<p>最终效果如下</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;%- set serverURLs = config.valine.serverURLs or &#x27;https://&#x27; + config.valine.appId.slice(0, 8) | lower + &#x27;.api.lncldglobal.com&#x27; %&#125;</span><br><span class="line">&lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">NexT.utils.loadComments(&#x27;#valine-comments&#x27;, () =&gt; &#123;</span><br><span class="line">  NexT.utils.getScript(&#x27;https://unpkg.com/valine@1.4.14/dist/Valine.min.js&#x27;, () =&gt; &#123;</span><br><span class="line">    new Valine(Object.assign(&#123;&#123; config.valine | safedump &#125;&#125;, &#123;</span><br><span class="line">      el: &#x27;#valine-comments&#x27;,</span><br><span class="line">      path: &#123;&#123; url_for(page.path) | replace(r/index\.html$/, &#x27;&#x27;) | safedump &#125;&#125;,</span><br><span class="line">      serverURLs: &#123;&#123; serverURLs | safedump &#125;&#125;</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;, window.Valine);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+      <categories>
+        <category>折腾之路</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>valine</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>群晖安装transmission以及相关注意事项</title>
     <url>/p/synology-install-transmission/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Transmission-与-Download-Station-是什么关系？"><a href="#Transmission-与-Download-Station-是什么关系？" class="headerlink" title="Transmission 与 Download Station 是什么关系？"></a>Transmission 与 Download Station 是什么关系？</h3><ul>
