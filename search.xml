@@ -111,6 +111,23 @@
       </tags>
   </entry>
   <entry>
+    <title>HUGO文章目录BUG</title>
+    <url>/p/hugo-toc/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近有个朋友向我问起一个关于文章目录树的问题，他使用的博客程序是HUGO，他说他下载的主题已经带有文章目录这个功能了，可不知为什么只会显示H2、H3这两级的目录，后面的H4、H5、H6直接隐藏了，根本就不能显示，由于我没有使用过HUGO这个系统，所以一时半会真不能为他解答。</p>
+<p>因为他说能显示H2、H3这两级，那说明主题构建的文章目录这个功能是没有问题的，肯定是因为某个设置才导致其他级别的标题出错，去官网查询了下，还真让我发现了问题所在。<a id="more"></a></p>
+<p>导致我朋友这个问题的出现应该是因为HUGO在0.60版本更新时更换了渲染器，然而他使用的主题又没有对此进行相应的更新与说明。话说现在都已经0.80版本了，问题居然还在，看来用HUGO的人还是相对少了点。根据官网的提示，我们只需在配置文件里添加以下代码即可解决。</p>
+<p>在<code>config.toml</code>添加</p>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[markup]</span></span><br><span class="line">  <span class="section">[markup.tableOfContents]</span></span><br><span class="line">    <span class="attr">endLevel</span> = <span class="number">3</span></span><br><span class="line">    <span class="attr">ordered</span> = <span class="literal">false</span></span><br><span class="line">    <span class="attr">startLevel</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>代码中<code>startLevel = 2</code>的意思从H2开始，<code>endLevel = 3</code>到H3结束。所以这里要按自己的需求来修改即可。</p>
+]]></content>
+      <categories>
+        <category>折腾之路</category>
+      </categories>
+      <tags>
+        <tag>-hugo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>群晖安装transmission以及相关注意事项</title>
     <url>/p/synology-install-transmission/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Transmission-与-Download-Station-是什么关系？"><a href="#Transmission-与-Download-Station-是什么关系？" class="headerlink" title="Transmission 与 Download Station 是什么关系？"></a>Transmission 与 Download Station 是什么关系？</h3><ul>
