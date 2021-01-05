@@ -6,7 +6,7 @@
   <link href="https://lmbk.net/atom.xml" rel="self"/>
   
   <link href="https://lmbk.net/"/>
-  <updated>2021-01-01T20:22:54.382Z</updated>
+  <updated>2021-01-05T10:27:00.721Z</updated>
   <id>https://lmbk.net/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lmbk.net/p/hugo-toc/"/>
     <id>https://lmbk.net/p/hugo-toc/</id>
     <published>2021-01-01T19:29:44.000Z</published>
-    <updated>2021-01-01T20:22:54.382Z</updated>
+    <updated>2021-01-05T10:27:00.721Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近有个朋友向我问起一个关于文章目录树的问题，他使用的博客程序是HUGO，他说他下载的主题已经带有文章目录这个功能了，可不知为什么只会显示H2、H3这两级的目录，后面的H4、H5、H6直接隐藏了，根本就不能显示，由于我没有使用过HUGO这个系统，所以一时半会真不能为他解答。</p><p>因为他说能显示H2、H3这两级，那说明主题构建的文章目录这个功能是没有问题的，肯定是因为某个设置才导致其他级别的标题出错，去官网查询了下，还真让我发现了问题所在。<a id="more"></a></p><p>导致我朋友这个问题的出现应该是因为HUGO在0.60版本更新时更换了渲染器，然而他使用的主题又没有对此进行相应的更新与说明。话说现在都已经0.80版本了，问题居然还在，看来用HUGO的人还是相对少了点。根据官网的提示，我们只需在配置文件里添加以下代码即可解决。</p><p>在<code>config.toml</code>添加</p><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[markup]</span></span><br><span class="line">  <span class="section">[markup.tableOfContents]</span></span><br><span class="line">    <span class="attr">endLevel</span> = <span class="number">3</span></span><br><span class="line">    <span class="attr">ordered</span> = <span class="literal">false</span></span><br><span class="line">    <span class="attr">startLevel</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure><p>代码中<code>startLevel = 2</code>的意思从H2开始，<code>endLevel = 3</code>到H3结束。所以这里要按自己的需求来修改即可。</p>]]></content>
     
@@ -34,7 +34,7 @@
     <category term="折腾之路" scheme="https://lmbk.net/categories/%E6%8A%98%E8%85%BE%E4%B9%8B%E8%B7%AF/"/>
     
     
-    <category term="-hugo" scheme="https://lmbk.net/tags/hugo/"/>
+    <category term="hugo" scheme="https://lmbk.net/tags/hugo/"/>
     
   </entry>
   
