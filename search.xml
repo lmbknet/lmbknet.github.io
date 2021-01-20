@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/p/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>折腾之路</category>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>简述Hexo在Typora插入图片</title>
     <url>/p/hexo-image/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>关于hexo在Typora上插入图片的相关操作，先在Typora偏好设置上进行如下图的设置。</p>
@@ -44,6 +23,27 @@
       <tags>
         <tag>hexo</tag>
         <tag>typora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/p/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a><a id="more"></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>折腾之路</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -293,6 +293,36 @@
         <tag>群晖</tag>
         <tag>NAS</tag>
         <tag>VPN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>有关Windows PowerShell的脚本执行策略</title>
+    <url>/p/windows-powershell/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><img data-src="/p/windows-powershell/2021-01-20-20-38.png" class="">
+
+<p>PowerShell 脚本执行策略是为了保护计算机安全，防止恶意PS脚本运行的。我以前没用到过PS脚本，都是使用Git Bash Here，最近在VScode编辑器里试着直接<code>hexo clean ; hexo g ; hexo s</code>时，VScode里的默认终端使用的是PowerShell，输入命令直接报错“无法加载文件，因为在此系统上禁止运行脚本”。然后才了解 PowerShell 脚本执行策略。</p>
+<p>这里要注意的是，PowerShell的分隔符要使用<code>;</code>，而不是使用<code>&amp;&amp;</code>。<a id="more"></a></p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在windows“开始”菜单里，找到Windows PowerShell，右键菜单选择“以管理员身份运行”。</p>
+<p>在 PowerShell 窗口里，执行</p>
+<p><code>Set-ExecutionPolicy RemoteSigned</code></p>
+<p>然后就可以运行了。</p>
+<h2 id="下面介绍PowerShell-脚本执行策略"><a href="#下面介绍PowerShell-脚本执行策略" class="headerlink" title="下面介绍PowerShell 脚本执行策略"></a>下面介绍PowerShell 脚本执行策略</h2><p>微软官方文档位于：<a href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7">https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7</a></p>
+<p>简单点说，为了防止恶意的PowerShell脚本，微软给PS脚本设置了不同的运行授权级别：</p>
+<h3 id="AllSigned"><a href="#AllSigned" class="headerlink" title="AllSigned"></a>AllSigned</h3><p>只允许带签名的PS脚本运行</p>
+<h3 id="Bypass"><a href="#Bypass" class="headerlink" title="Bypass"></a>Bypass</h3><p>放弃治疗，随便运行</p>
+<h3 id="RemoteSigned"><a href="#RemoteSigned" class="headerlink" title="RemoteSigned"></a>RemoteSigned</h3><p>远程脚本需要签名，本地脚本不用。就是我们上面设置的级别，远程指的是网上下载或电子邮件等途径获得的脚本。服务器系统默认就是这个级别。</p>
+<h3 id="Restricted"><a href="#Restricted" class="headerlink" title="Restricted"></a>Restricted</h3><p>受限制的，不允许运行脚本，只执行在PowerShell窗口里敲的命令。这个是个人系统默认的运行授权级别。</p>
+<h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h3><p>表示运行级别尚未定义。但此时实际是执行上面提到的系统默认运行级别。</p>
+<h3 id="Unrestricted"><a href="#Unrestricted" class="headerlink" title="Unrestricted"></a>Unrestricted</h3><p>在Win平台之外使用PowerShell时的默认级别。允许全部脚本执行，对非本地脚本给出提醒。</p>
+<hr>
+<h2 id="相关命令："><a href="#相关命令：" class="headerlink" title="相关命令："></a>相关命令：</h2><p><strong>Get-ExecutionPolicy</strong><br>查看当前的设置</p>
+<p><strong>Set-ExecutionPolicy</strong><br>设置运行级别</p>
+]]></content>
+      <categories>
+        <category>折腾之路</category>
+      </categories>
+      <tags>
+        <tag>powershell</tag>
       </tags>
   </entry>
   <entry>
