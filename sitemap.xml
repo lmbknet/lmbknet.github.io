@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lmbk.net/p/hexo-deploy/</loc>
+    
+    <lastmod>2021-02-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lmbk.net/p/windows-powershell/</loc>
     
     <lastmod>2021-01-20</lastmod>
@@ -88,7 +95,7 @@
 
   <url>
     <loc>https://lmbk.net/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,77 +103,77 @@
   
   <url>
     <loc>https://lmbk.net/tags/hexo/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/typora/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/next/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/valine/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/hugo/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/%E7%BE%A4%E6%99%96/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/NAS/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/transmission/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/VPN/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/powershell/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/tags/%E8%84%9A%E6%9C%AC/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -175,14 +182,14 @@
   
   <url>
     <loc>https://lmbk.net/categories/%E6%8A%98%E8%85%BE%E4%B9%8B%E8%B7%AF/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://lmbk.net/categories/%E6%8A%98%E8%85%BE%E4%B9%8B%E8%B7%AF/hexo/</loc>
-    <lastmod>2021-01-20</lastmod>
+    <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

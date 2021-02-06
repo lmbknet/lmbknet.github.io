@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/p/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a><a id="more"></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>折腾之路</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo自动部署到git、ftp（虚拟主机等）、云服务器的方式</title>
+    <url>/p/hexo-deploy/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>自动部署很有用，当你写完文章后，直接使用<code>hexo d</code>就可以自动更新你的网站了</p>
+<h3 id="部署到git"><a href="#部署到git" class="headerlink" title="部署到git"></a>部署到git</h3><p>首先你需要在你的blog下安装git deployer插件：<code>npm install hexo-deployer-git --save</code>，然后再把如下代码添加到你的_config.yml文件中</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">### git deploy</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">xxxx</span>  <span class="comment"># 你的远程仓库</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 你的远程残酷分支</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">&quot;hello guys&quot;</span> <span class="comment"># 每次提交的信息</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，部署到git需要再本地安装你ssh key，也就是说允许本地进行读写远程git仓库，否则你会没权限的</p>
+<h3 id="部署到ftp服务器"><a href="#部署到ftp服务器" class="headerlink" title="部署到ftp服务器"></a>部署到ftp服务器</h3><p>你可能会用一台虚拟主机来部署你的hexo个人站点，那么fip怎么部署? 首先你需要下载安装ftp deployer插件：<code>npm install hexo-deployer-ftpsync --save</code>，然后把你下面的代码贴到你的_config.yml中，注意修改ftp的相关参数。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### ftp deploy</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"> <span class="attr">type:</span> <span class="string">ftpsync</span></span><br><span class="line"> <span class="attr">host:</span> <span class="string">ftpserver</span> <span class="comment"># ftp服务器地址</span></span><br><span class="line"> <span class="attr">user:</span> <span class="string">ftpusername</span> <span class="comment"># ftp用户名</span></span><br><span class="line"> <span class="attr">pass:</span> <span class="string">xxxx</span> <span class="comment"># 你的ftp用户密码</span></span><br><span class="line"> <span class="attr">remote:</span> <span class="string">xxx</span> <span class="comment"># 你要上传到的地址，例如/wwwroot</span></span><br><span class="line"> <span class="attr">port:</span> <span class="number">21</span> <span class="comment"># ftp端口，不同的ftp可能会不一样</span></span><br><span class="line"> <span class="attr">delete:</span> <span class="literal">true</span> <span class="comment"># 上传本地文件是否删除ftp中的所有文件</span></span><br><span class="line"> <span class="attr">verbose:</span> <span class="literal">true</span> <span class="comment"># 是否打印调试信息</span></span><br><span class="line"> <span class="attr">ignore_errors:</span> <span class="literal">false</span> <span class="comment"># 是否忽略错误</span></span><br></pre></td></tr></table></figure>
+<h3 id="部署到远程主机，通常如VPS或者云服务器"><a href="#部署到远程主机，通常如VPS或者云服务器" class="headerlink" title="部署到远程主机，通常如VPS或者云服务器"></a>部署到远程主机，通常如VPS或者云服务器</h3><p>同样要下载hexo deployer: <code>npm install hexo-deployer-rsync --save</code>，然后代码奉上：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span> <span class="comment"># 主机地址</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span> <span class="comment"># 用户名</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span> <span class="comment"># 要上传到的目录</span></span><br><span class="line">  <span class="attr">port:</span> [<span class="string">port</span>] <span class="comment"># Default is 22</span></span><br><span class="line">  <span class="attr">delete:</span> [<span class="literal">true</span><span class="string">|false</span>] <span class="comment"># Default is true</span></span><br><span class="line">  <span class="attr">args:</span> <span class="string">&lt;rsync</span> <span class="string">args&gt;</span></span><br><span class="line">  <span class="attr">verbose:</span> [<span class="literal">true</span><span class="string">|false</span>] <span class="comment"># Default is true</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> [<span class="literal">true</span><span class="string">|false</span>] <span class="comment"># Default is false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>折腾之路</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>简述Hexo在Typora插入图片</title>
     <url>/p/hexo-image/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>关于hexo在Typora上插入图片的相关操作，先在Typora偏好设置上进行如下图的设置。</p>
@@ -23,27 +63,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>typora</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/p/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>折腾之路</category>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
