@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lmbk.net/p/hexo-deploy/</loc>
+    <loc>https://lmbk.net/hexo-deploy/</loc>
     <lastmod>2021-02-06</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/windows-powershell/</loc>
+    <loc>https://lmbk.net/windows-powershell/</loc>
     <lastmod>2021-01-20</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/hugo-toc/</loc>
+    <loc>https://lmbk.net/hugo-toc/</loc>
     <lastmod>2021-01-05</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/hexo-next-valine-install/</loc>
+    <loc>https://lmbk.net/hexo-next-valine-install/</loc>
     <lastmod>2020-12-28</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/synology-nas-vps-server/</loc>
+    <loc>https://lmbk.net/synology-nas-vps-server/</loc>
     <lastmod>2020-12-23</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/hexo-init/</loc>
+    <loc>https://lmbk.net/hexo-init/</loc>
     <lastmod>2020-12-21</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/hexo-image/</loc>
+    <loc>https://lmbk.net/hexo-image/</loc>
     <lastmod>2020-12-21</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/hello-world/</loc>
+    <loc>https://lmbk.net/hello-world/</loc>
     <lastmod>2020-12-21</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/windows-sh-linux-bin-bash-error/</loc>
+    <loc>https://lmbk.net/windows-sh-linux-bin-bash-error/</loc>
     <lastmod>2020-12-21</lastmod>
   </url>
   <url>
-    <loc>https://lmbk.net/p/synology-install-transmission/</loc>
+    <loc>https://lmbk.net/synology-install-transmission/</loc>
     <lastmod>2020-12-20</lastmod>
   </url>
 </urlset> 
