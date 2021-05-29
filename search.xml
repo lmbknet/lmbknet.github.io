@@ -5,17 +5,20 @@
     <url>/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a><a id="more"></a></p>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a><span id="more"></span></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
         <category>折腾之路</category>
-        <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -27,16 +30,17 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>自动部署很有用，当你写完文章后，直接使用<code>hexo d</code>就可以自动更新你的网站了</p>
 <h3 id="部署到git"><a href="#部署到git" class="headerlink" title="部署到git"></a>部署到git</h3><p>首先你需要在你的blog下安装git deployer插件：<code>npm install hexo-deployer-git --save</code>，然后再把如下代码添加到你的_config.yml文件中</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">### git deploy</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">xxxx</span>  <span class="comment"># 你的远程仓库</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 你的远程残酷分支</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">&quot;hello guys&quot;</span> <span class="comment"># 每次提交的信息</span></span><br></pre></td></tr></table></figure>
+
 <p>需要注意的是，部署到git需要再本地安装你ssh key，也就是说允许本地进行读写远程git仓库，否则你会没权限的</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="部署到ftp服务器"><a href="#部署到ftp服务器" class="headerlink" title="部署到ftp服务器"></a>部署到ftp服务器</h3><p>你可能会用一台虚拟主机来部署你的hexo个人站点，那么fip怎么部署? 首先你需要下载安装ftp deployer插件：<code>npm install hexo-deployer-ftpsync --save</code>，然后把你下面的代码贴到你的_config.yml中，注意修改ftp的相关参数。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### ftp deploy</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"> <span class="attr">type:</span> <span class="string">ftpsync</span></span><br><span class="line"> <span class="attr">host:</span> <span class="string">ftpserver</span> <span class="comment"># ftp服务器地址</span></span><br><span class="line"> <span class="attr">user:</span> <span class="string">ftpusername</span> <span class="comment"># ftp用户名</span></span><br><span class="line"> <span class="attr">pass:</span> <span class="string">xxxx</span> <span class="comment"># 你的ftp用户密码</span></span><br><span class="line"> <span class="attr">remote:</span> <span class="string">xxx</span> <span class="comment"># 你要上传到的地址，例如/wwwroot</span></span><br><span class="line"> <span class="attr">port:</span> <span class="number">21</span> <span class="comment"># ftp端口，不同的ftp可能会不一样</span></span><br><span class="line"> <span class="attr">delete:</span> <span class="literal">true</span> <span class="comment"># 上传本地文件是否删除ftp中的所有文件</span></span><br><span class="line"> <span class="attr">verbose:</span> <span class="literal">true</span> <span class="comment"># 是否打印调试信息</span></span><br><span class="line"> <span class="attr">ignore_errors:</span> <span class="literal">false</span> <span class="comment"># 是否忽略错误</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="部署到远程主机，通常如VPS或者云服务器"><a href="#部署到远程主机，通常如VPS或者云服务器" class="headerlink" title="部署到远程主机，通常如VPS或者云服务器"></a>部署到远程主机，通常如VPS或者云服务器</h3><p>同样要下载hexo deployer: <code>npm install hexo-deployer-rsync --save</code>，然后代码奉上：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span> <span class="comment"># 主机地址</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span> <span class="comment"># 用户名</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span> <span class="comment"># 要上传到的目录</span></span><br><span class="line">  <span class="attr">port:</span> [<span class="string">port</span>] <span class="comment"># Default is 22</span></span><br><span class="line">  <span class="attr">delete:</span> [<span class="literal">true</span><span class="string">|false</span>] <span class="comment"># Default is true</span></span><br><span class="line">  <span class="attr">args:</span> <span class="string">&lt;rsync</span> <span class="string">args&gt;</span></span><br><span class="line">  <span class="attr">verbose:</span> [<span class="literal">true</span><span class="string">|false</span>] <span class="comment"># Default is true</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> [<span class="literal">true</span><span class="string">|false</span>] <span class="comment"># Default is false</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>折腾之路</category>
-        <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -51,7 +55,7 @@
 <p>然后按照下面的步骤操作：</p>
 <ol>
 <li>修改<code>post_asset_folder: true</code></li>
-<li>生成一篇新的文章<code>hexo new hexo-image.md</code> <a id="more"></a></li>
+<li>生成一篇新的文章<code>hexo new hexo-image.md</code> <span id="more"></span></li>
 <li>通过Typora打开hexo-image.md并插入一张图片，这时我们可以发现，在<code>source/_posts</code>目录下，图片已经自动拷贝到hexo-image这个目录里了。</li>
 <li>回到hexo-site根目录安装相关的插件<code>npm install hexo-image-link --save</code></li>
 <li>这时我们就可以使用<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>看看效果了。</li>
@@ -60,7 +64,6 @@
 ]]></content>
       <categories>
         <category>折腾之路</category>
-        <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -72,13 +75,15 @@
     <url>/hexo-init/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> hexo init &lt;folder&gt;</span><br><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line"><span class="variable">$</span> npm install</span><br></pre></td></tr></table></figure>
+
 <p>新建完成后，指定文件夹的目录如下：</p>
 <figure class="highlight sqf"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="variable">_config</span>.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── <span class="variable">_drafts</span></span><br><span class="line">|   └── <span class="variable">_posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，您可以在此配置大部分的参数。</p>
 <h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序的信息。<a href="https://ejs.co/">EJS</a>, <a href="http://learnboost.github.io/stylus/">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
 <figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span>.json&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;private&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hexo&quot;</span>: <span class="string">&quot;^3.8.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;^0.1.5&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;^0.1.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-index&quot;</span>: <span class="string">&quot;^0.2.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;^0.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;^0.3.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;^0.3.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;^0.3.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-server&quot;</span>: <span class="string">&quot;^0.3.3&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p><a href="https://hexo.io/zh-cn/docs/writing">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
 <p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
 <h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
@@ -86,7 +91,6 @@
 ]]></content>
       <categories>
         <category>折腾之路</category>
-        <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -99,23 +103,29 @@
 <p>我其实是挺喜欢Valine的，主要是因为喜欢它的简洁。但在NEXT最新版本的主题上，已经把这个主题移除。相关的说明如下：</p>
 <img data-src="/hexo-next-valine-install/1.png" class="">
 
-<a id="more"></a>
+<span id="more"></span>
 
 <p>官方说明链接：<a href="https://github.com/next-theme/hexo-theme-next/issues/4">https://github.com/next-theme/hexo-theme-next/issues/4</a></p>
 <p>对于我来说，隐私什么的都是浮云，哪个方便就怎样来吧。所以我决定还是采用Valine这个评论，毕竟国内好用的第三方评论系统就那么几个，而且我只对Valine有点了解。</p>
 <h3 id="安装Valine"><a href="#安装Valine" class="headerlink" title="安装Valine"></a>安装Valine</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install next-theme&#x2F;hexo-next-valine</span><br></pre></td></tr></table></figure>
+
 <p>把插件装好后，我们只需到主题设置里添加</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"><span class="comment"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span></span><br><span class="line">valine:</span><br><span class="line">  enable: false</span><br><span class="line">  appId:  # your leancloud application appid</span><br><span class="line">  appKey:  # your leancloud application appkey</span><br><span class="line">  serverURLs: # When the custom domain name is enabled, fill it in here</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: mm # gravatar style</span><br><span class="line">  meta: [nick, mail, link] # Custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br><span class="line">  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors&#x27; for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span><br><span class="line">  comment_count: true # If false, comment count will only be displayed in post page, not in home page</span><br><span class="line">  recordIP: false # Whether to record the commenter IP</span><br></pre></td></tr></table></figure>
+
 <p>理论只须更改<code>appId</code>和<code>appKey</code>这两项，要注意空格问题。</p>
 <h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>顺利安装完成后，却发现出现401这个错误，再次确认不是设置的问题。在网上寻找得知，是因为插件里引用的CDN出了问题，没办法，只好自己着手修改一下。</p>
 <p>在hexo站点目录找到valine.njk这个文件，路径如下。</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">node_modules/hexo-next-valine/valine.njk</span><br></pre></td></tr></table></figure>
+
 <p>添加一行</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 <p>将jsderlivr这个CDN换成unpkg的</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">https://unpkg.com/valine@1.4.14/dist/Valine.min.js</span><br></pre></td></tr></table></figure>
+
 <p>最终效果如下</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;%- set serverURLs = config.valine.serverURLs or &#x27;https://&#x27; + config.valine.appId.slice(0, 8) | lower + &#x27;.api.lncldglobal.com&#x27; %&#125;</span><br><span class="line">&lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">NexT.utils.loadComments(&#x27;#valine-comments&#x27;, () =&gt; &#123;</span><br><span class="line">  NexT.utils.getScript(&#x27;https://unpkg.com/valine@1.4.14/dist/Valine.min.js&#x27;, () =&gt; &#123;</span><br><span class="line">    new Valine(Object.assign(&#123;&#123; config.valine | safedump &#125;&#125;, &#123;</span><br><span class="line">      el: &#x27;#valine-comments&#x27;,</span><br><span class="line">      path: &#123;&#123; url_for(page.path) | replace(r/index\.html$/, &#x27;&#x27;) | safedump &#125;&#125;,</span><br><span class="line">      serverURLs: &#123;&#123; serverURLs | safedump &#125;&#125;</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;, window.Valine);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 
 
 
@@ -123,7 +133,6 @@
 ]]></content>
       <categories>
         <category>折腾之路</category>
-        <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -135,10 +144,11 @@
     <title>HUGO文章目录BUG</title>
     <url>/hugo-toc/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近有个朋友向我问起一个关于文章目录树的问题，他使用的博客程序是HUGO，他说他下载的主题已经带有文章目录这个功能了，可不知为什么只会显示H2、H3这两级的目录，后面的H4、H5、H6直接隐藏了，根本就不能显示，由于我没有使用过HUGO这个系统，所以一时半会真不能为他解答。</p>
-<p>因为他说能显示H2、H3这两级，那说明主题构建的文章目录这个功能是没有问题的，肯定是因为某个设置才导致其他级别的标题出错，去官网查询了下，还真让我发现了问题所在。<a id="more"></a></p>
+<p>因为他说能显示H2、H3这两级，那说明主题构建的文章目录这个功能是没有问题的，肯定是因为某个设置才导致其他级别的标题出错，去官网查询了下，还真让我发现了问题所在。<span id="more"></span></p>
 <p>导致我朋友这个问题的出现应该是因为HUGO在0.60版本更新时更换了渲染器，然而他使用的主题又没有对此进行相应的更新与说明。话说现在都已经0.80版本了，问题居然还在，看来用HUGO的人还是相对少了点。根据官网的提示，我们只需在配置文件里添加以下代码即可解决。</p>
 <p>在<code>config.toml</code>添加</p>
 <figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[markup]</span></span><br><span class="line">  <span class="section">[markup.tableOfContents]</span></span><br><span class="line">    <span class="attr">endLevel</span> = <span class="number">3</span></span><br><span class="line">    <span class="attr">ordered</span> = <span class="literal">false</span></span><br><span class="line">    <span class="attr">startLevel</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
 <p>代码中<code>startLevel = 2</code>的意思从H2开始，<code>endLevel = 3</code>到H3结束。所以这里要按自己的需求来修改即可。</p>
 ]]></content>
       <categories>
@@ -156,7 +166,7 @@
 </li>
 <li><p>Download Station 是群晖自带的下载软件，它可以下载除了BT以外的其他内容，如：http, ftp 等；只是它的BT功能是由封装到内部的 Transmission 来实现；</p>
 </li>
-<li><p>所以他们不是一个东西！<a id="more"></a></p>
+<li><p>所以他们不是一个东西！<span id="more"></span></p>
 </li>
 <li><p>所以他们不是一个东西！</p>
 </li>
@@ -182,27 +192,33 @@
 <li>获取最新的安装脚本：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>国内用户可使用 <code>gitee</code> 镜像地址（下同）：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>tee.com<span class="regexp">/culturist/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-gitee.sh</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>请留意执行结果，如果出现 <code>install-tr-control-cn.sh.1</code> 之类的提示，表示文件已存在，请使用 <code>rm install-tr-control-cn.sh*</code> 删除之前的脚本再重新执行上面的命令；</li>
 <li>如果提示 <code>https</code> 获取失败，请使用以下命令获取安装脚本：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh --no-check-certificate</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>如果提示文件已存在，可以通过 <code>rm install-tr-control-cn.sh</code> 进行删除后再执行下载；或者在 <code>wget</code> 后面添加 <code>-N</code> 参数，如：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget -N https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control-cn.sh --no-check-certificate</span><br></pre></td></tr></table></figure>
+
 <h4 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h4><ul>
 <li>执行安装脚本（如果系统不支持 <code>bash</code> 命令，请尝试将 <code>bash</code> 改为 <code>sh</code> ）：</li>
 </ul>
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">bash install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>如果出现 <code>Permission denied</code> 之类的提示，表示没有权限，可尝试添加执行权限：</li>
 </ul>
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">chmod +<span class="keyword">x</span> install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>如果命令成功执行，将出现以下界面：</p>
 <p><img data-src="https://github.com/ronggang/transmission-web-control/wiki/images/install-tr-control-cn.png" alt="install-tr-control-cn"></p>
@@ -213,11 +229,13 @@
 </li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/ronggang/</span>transmission-web-control<span class="regexp">/raw/m</span>aster<span class="regexp">/release/i</span>nstall-tr-control.sh --no-check-certificate</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>安装完成后，用浏览器访问 Transmission Web Interface（如：<a href="http://192.168.1.1:9091/">http://192.168.1.1:9091/</a> ）即可看到新的界面；如果无法看到新界面，可能是浏览器缓存了，请按 <code>Ctrl + F5</code> 强制刷新页面或 <a href="https://jingyan.baidu.com/article/8065f87fc59f1723312498f1.html">清空缓存</a> 后再重新打开；</li>
 <li>如果在知道自己的 Transmission Web 所在目录，也可以在安装脚本后面直接加路径，以避免搜索，如：</li>
 </ul>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">bash install-tr-control-cn.sh <span class="regexp">/usr/</span>local<span class="regexp">/transmission/</span>share/transmission</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>注意，路径最后 <strong><code>不要</code></strong> 加 <code>web</code> ；</li>
 </ul>
@@ -233,6 +251,7 @@
 <li>如果之前已经下载过安装脚本，只需要在安装脚本所在目录执行一次脚本即可：</li>
 </ul>
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">sudo bash install-<span class="keyword">tr</span>-control-<span class="keyword">cn</span>.<span class="keyword">sh</span>	</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>如果没有下载过安装脚本，或脚本有更新时，请参考安装方式重新下载安装脚本执行安装即可。</li>
 </ul>
@@ -257,7 +276,7 @@
 <h3 id="选择的理由"><a href="#选择的理由" class="headerlink" title="选择的理由"></a>选择的理由</h3><p>其实实现外网访问内网的方法有很多，但我还是选择VPN这个方法的主要原因有下：</p>
 <ul>
 <li>方便。在群晖NAS上安装好套件进行简单的设置后，在需要远程访问的电脑安装好VPN的客户端就可以访问家里内网上的设备，如NAS、路由器、虚拟机等设备。</li>
-<li>安全。我们只需要在公网上公放VPN的端口，不用每个设备的端口都进行转发，因为内网间使用端口不用在路由器上进行端口转发，大大的提高了安全性。加上端口开放得太多也很难管理，特别是时间久了后。<a id="more"></a></li>
+<li>安全。我们只需要在公网上公放VPN的端口，不用每个设备的端口都进行转发，因为内网间使用端口不用在路由器上进行端口转发，大大的提高了安全性。加上端口开放得太多也很难管理，特别是时间久了后。<span id="more"></span></li>
 </ul>
 <h3 id="安装VPN服务端套件"><a href="#安装VPN服务端套件" class="headerlink" title="安装VPN服务端套件"></a>安装VPN服务端套件</h3><p>大家都知道群晖是买系统送主机的，由此可以想到这个系统的便捷性，我们直接在套件中心上搜索“VPN”，选择VPN Server这个套件进行安装即可，安装完成后我们就可以在左上角的主菜单里找到安装完成的VPN Server了。</p>
 <img data-src="/synology-nas-vps-server/2020-12-23-19-03-28.png" class="">
@@ -317,12 +336,30 @@
       </tags>
   </entry>
   <entry>
+    <title>后知后觉——vercel被墙</title>
+    <url>/vercel-china-ip/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天才发现我这个博客在国内不能访问，原因是vercel被墙了，我在家里一直能访问，就没多想，结果今天在外面用手机访问时竟然打不开，这时我就想到应该是vercel的问题了。结果回家一搜果然是如此。</p>
+<p>解决办法：</p>
+<ol>
+<li>更换IP——将A记录值从76.76.21.21更换为76.223.126.88。</li>
+<li>如果是使用CNAME的，将cname.vercel-dns.com更改为cname-china.vercel-dns.com。</li>
+</ol>
+<p>个人觉得不是长久之法，毕竟墙这东西，有第一次就有第二次，唉。本来我对vercel很看重的，看来以后还得另谋出路了。</p>
+]]></content>
+      <categories>
+        <category>折腾之路</category>
+      </categories>
+      <tags>
+        <tag>vercel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>有关Windows PowerShell的脚本执行策略</title>
     <url>/windows-powershell/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><img data-src="/windows-powershell/2021-01-20-20-38.png" class="">
 
 <p>PowerShell 脚本执行策略是为了保护计算机安全，防止恶意PS脚本运行的。我以前没用到过PS脚本，都是使用Git Bash Here，最近在VScode编辑器里试着直接<code>hexo clean ; hexo g ; hexo s</code>时，VScode里的默认终端使用的是PowerShell，输入命令直接报错“无法加载文件，因为在此系统上禁止运行脚本”。然后才了解 PowerShell 脚本执行策略。</p>
-<p>这里要注意的是，PowerShell的分隔符要使用<code>;</code>，而不是使用<code>&amp;&amp;</code>。<a id="more"></a></p>
+<p>这里要注意的是，PowerShell的分隔符要使用<code>;</code>，而不是使用<code>&amp;&amp;</code>。<span id="more"></span></p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在windows“开始”菜单里，找到Windows PowerShell，右键菜单选择“以管理员身份运行”。</p>
 <p>在 PowerShell 窗口里，执行</p>
 <p><code>Set-ExecutionPolicy RemoteSigned</code></p>
@@ -352,7 +389,7 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>不知道大家有没有遇到这样的情况，在Windows上编写了一些脚本命令，使用起来正常，可当我们把这个脚本复制到Linux上使用时却出现下面的问题。</p>
 <img data-src="/windows-sh-linux-bin-bash-error/2020-12-21-17-53-40.png" class="">
 
-<a id="more"></a>
+<span id="more"></span>
 
 <p>具体的原因是文件格式的问题，我们可以进行相应的修改。方法有下面两种：</p>
 <ol>
